@@ -6,6 +6,8 @@
         - Class Has Properties & Methods
         - Variable Inside Class = [ Property ]
         - Variable Outside Class = [ Variable ]
+        - Function Inside Class = [ Method ]
+        - Function Outside Class = [ Function ]
         
         - [ class ] = Class Keyword
         - [ new ] = New Object
@@ -38,6 +40,13 @@ class appleDevice
     public $inch = '5.5';
     public $space = '50GB';
     public $color =  'Red';
+    
+    //Methods
+
+    public function doubleHomePressed()
+    {
+        echo 'You have Pressed The Home Button Twice';
+    }
 }
 
     $iphone6Plus = new  appleDevice();
@@ -45,6 +54,7 @@ class appleDevice
     $iphone6Plus->inch = "5.5";
     $iphone6Plus->space = "32GB";
     $iphone6Plus->color = "Red";
+    $iphone6Plus->doubleHomePressed();
     echo '<per>';
     var_dump($iphone6Plus);
     echo '<per>';
