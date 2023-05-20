@@ -16,6 +16,19 @@
         - [ $this ] =  Pseudo Variable [ Refer To Object properties]
         - [ :: ] =  Scope Resolution Operator [ Pamayim Nekudotayim ] = Doble colon
         
+        self vs $this
+
+        self:
+        - Refer to current Class
+        - Access Static Members
+        - Not Use ( $ ) Because its Not Represnt Variable But Present Class Contruction
+        
+        $this:
+        - Refer to Current Object  
+        - Access Non Static Members
+        - Use ( $ ) Because It Represent a Variable
+
+        
         Apple 
         - Apple Store                = Application
         - Iphone & labtop            = Object
