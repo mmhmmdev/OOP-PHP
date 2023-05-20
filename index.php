@@ -55,6 +55,7 @@ class appleDevice
     public $space = '50GB';
     public $color =  'Red';
     public $OwnerName;
+    private $lock;
 
 //Constants
     
@@ -65,23 +66,39 @@ const OWNERNAME = '3';
     // {
     //     echo 'This Phone Ram is:' . $this->ram .'<br>';
     // }
-    public function setOwnerName($owner)
+    // public function setOwnerName($owner)
+    // {
+    //     if(strlen($owner) < self::OWNERNAME){
+    //         echo 'Owner Name Cant Be Less Than '.self::OWNERNAME.' Chars';
+    //     } else {   
+    //         echo 'You Name Has Been Set';
+    //     }
+    // }
+    
+    // public function changeSpec($ra, $in)
+    // {
+    //     $this->ram  = $ra;
+    //     $this->inch = $in;
+        
+    // }
+
+    public function changeLock($lo)
     {
-        if(strlen($owner) < self::OWNERNAME){
-            echo 'Owner Name Cant Be Less Than '.self::OWNERNAME.' Chars';
-        } else {   
-            echo 'You Name Has Been Set';
-        }
+        $this->lock  = sha1($lo);
+        
     }
 }
 
     $iphone6Plus = new  appleDevice();
-    $iphone6Plus->ram = "3GB";
-    $iphone6Plus->inch = "5.5";
+    // $iphone6Plus -> changeSpec("2G","5.5");
+    $iphone6Plus -> changeLock("mohammad@gmail.com");
+    // $iphone6Plus->ram = "3GB";
+    // $iphone6Plus->inch = "5.5";
     $iphone6Plus->space = "32GB";
     $iphone6Plus->color = "Red";
     // $iphone6Plus->OwnerName = "Mohammad";
-    $iphone6Plus->setOwnerName('mohammad');
+    // $iphone6Plus->setOwnerName('mohammad');
+    echo $iphone6Plus->lock;
     echo '<pre>';
     var_dump($iphone6Plus);
     echo '<pre>';
