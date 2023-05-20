@@ -13,6 +13,8 @@
         - [ new ] = New Object
         - [ Public, Private, Protected ] = Visibility Markers 
         - [ -> ] = Object Operator
+        - [ $this ] =  Pseudo Variable [ Refer To Object properties]
+        - [ :: ] =  Scope Resolution Operator [ Pamayim Nekudotayim ] = Doble colon
         
         Apple 
         - Apple Store                = Application
@@ -34,18 +36,29 @@
 
 class appleDevice
 {
-    //Properties
-    
+//Properties
     public $ram = '2GB';
     public $inch = '5.5';
     public $space = '50GB';
     public $color =  'Red';
-    
-    //Methods
+    public $OwnerName;
 
-    public function doubleHomePressed()
+//Constants
+    
+const OWNERNAME = '3';
+//Methods
+
+    // public function getSpecification()
+    // {
+    //     echo 'This Phone Ram is:' . $this->ram .'<br>';
+    // }
+    public function setOwnerName($owner)
     {
-        echo 'You have Pressed The Home Button Twice';
+        if(strlen($owner) < self::OWNERNAME){
+            echo 'Owner Name Cant Be Less Than '.self::OWNERNAME.' Chars';
+        } else {   
+            echo 'You Name Has Been Set';
+        }
     }
 }
 
@@ -54,22 +67,23 @@ class appleDevice
     $iphone6Plus->inch = "5.5";
     $iphone6Plus->space = "32GB";
     $iphone6Plus->color = "Red";
-    $iphone6Plus->doubleHomePressed();
-    echo '<per>';
+    // $iphone6Plus->OwnerName = "Mohammad";
+    $iphone6Plus->setOwnerName('mohammad');
+    echo '<pre>';
     var_dump($iphone6Plus);
-    echo '<per>';
+    echo '<pre>';
 
     $iphone7Plus = new  appleDevice();
     $iphone7Plus->ram = "5GB";
     $iphone7Plus->inch = "8.5";
     $iphone7Plus->space = "64GB";
     $iphone7Plus->color = "black";
-    echo '<per>';
+    echo '<pre>';
     var_dump($iphone7Plus);
-    echo '<per>';
+    echo '<pre>';
     
     $iphone = new  appleDevice();
-    echo '<per>';
+    echo '<pre>';
     var_dump($iphone);
-    echo '<per>';
+    echo '<pre>';
 ?>
