@@ -5,12 +5,14 @@ include('index.php');
 class SonyPhone extends AppleDevice
 {
 
-    public $camer = '25.mb';
+    public $camera = '25.mb';
+    // public $price;
 
-    
 }
 $sony = new  sonyPhone();
-$sony -> camer;
+$sony -> camera;
+$sony ->price = '$500';
+$sony -> sayHello('Sony');
 echo '<pre>';
 print_r($sony);
 echo '<pre>';

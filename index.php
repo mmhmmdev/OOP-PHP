@@ -46,17 +46,21 @@
         - Blog                       = Object
         - Code To Add New Post & News & Article = Class
         
+        [ extends ] نظام توريث 
+        -  تسطيع استخدم جميع بربورتي الموجودة داخل ال كلاس المشار اليه 
+        - ويمكنك من اضافة بربرتي جديدة حسب احتياجك 
+        
  */
 
 
 class AppleDevice
 {
 //Properties
+    public $name;   
     public $ram = '2GB';
     public $inch = '5.5';
     public $space = '50GB';
     public $color =  'Red';
-    public $OwnerName;
     // private $lock;
 
 //Constants
@@ -89,11 +93,19 @@ class AppleDevice
     //     $this->lock  = sha1($lo);
         
     // }
+
+    public function sayHello($name)
+    {
+        $this->name = $name;
+        echo 'Welcome To ' . $name;
+    }
 }
 
 
     $iphone6Plus = new  AppleDevice();
     $iphone6Plus -> changeSpec("2G","5.5");
+    $iphone6Plus -> sayHello('iphone');
+
     // $iphone6Plus -> changeLock("mohammad@gmail.com");
     // $iphone6Plus->ram = "3GB";
     // $iphone6Plus->inch = "5.5";
