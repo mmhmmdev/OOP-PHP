@@ -49,6 +49,10 @@
         [ extends ] نظام توريث 
         -  تسطيع استخدم جميع بربورتي الموجودة داخل ال كلاس المشار اليه 
         - ويمكنك من اضافة بربرتي جديدة حسب احتياجك 
+
+        [ final ] لمنع التوريث 
+        - تستطيع منع توريث لكلاس
+        - وتستطيع منع توريث المثود
         
  */
 
@@ -94,7 +98,7 @@ class AppleDevice
         
     // }
 
-    public function sayHello($name)
+    final  public function sayHello($name)
     {
         $this->name = $name;
         echo 'Welcome To ' . $name;
