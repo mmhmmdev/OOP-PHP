@@ -53,6 +53,13 @@
         [ final ] لمنع التوريث 
         - تستطيع منع توريث لكلاس
         - وتستطيع منع توريث المثود
+
+        [ Class Abstraction ]
+        - Cannot Be Intantiaed [ Cannot Create Object From ]
+        - Made For other Classes To Inherit prop & Methode From
+        - Can have Methods & Properties
+        - Can Have Abtracted Method And Non Abstracted Methods
+        - Abstract Methods [ Contains No Body Code ]
         
  */
 
