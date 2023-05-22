@@ -22,6 +22,10 @@
     --- CAlled when Setting a Value To a Property Not Accessible Or Not Found
     --- Accpt Two Parameters [ $prop, $Value ]
 
+    clone:
+    --- Typical Copy Of Object In Php Works By Reference.
+    --- Means Both ( Main And Copied ) Object Will Be Interlinked.
+    
  */
 
 class Iphone
@@ -30,14 +34,14 @@ class Iphone
     public $name ;
     private $ram;
 
-public function __get($prop)
-{
-        echo 'The Property [' . $prop . '] Not Found ';
     
-}
-
-
-
+    
+    
+    // public function __get($prop)
+    // {
+    //         echo 'The Property [' . $prop . '] Not Found ';
+        
+    // }
 
     
     // public function __call($name, $arguments)
