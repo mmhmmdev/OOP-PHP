@@ -60,7 +60,21 @@
         - Can have Methods & Properties
         - Can Have Abtracted Method And Non Abstracted Methods
         - Abstract Methods [ Contains No Body Code ]
-        
+
+
+        [ Visibilty Markers ]
+        * [public]
+        - if can be called in any scope. This means that a public property of an object can be both  
+        - retrieved and moblified from anywhere in a program -- in the class, a subclass or from outside 
+        - of the class, for example. This level is he default behavior when visibility is not declared because
+        - of backward-comatibility concerns with PHP4, which did not have visibility.
+        * [ Protected]
+        -  Protected proprties and methods can be accessed from inside the class they are declared, or in 
+        -  any class that extends them. they cant be accessed from outside the class or subclass
+        * [ Private ]
+        - a Private property or method can t be accessedby a subclass of the class it is defind in. if you 
+        - have a class with a protected property and a private property and then extend that class in the 
+        - subclass, you can access the property, but not the private property.  
  */
 
 
