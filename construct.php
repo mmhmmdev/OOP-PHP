@@ -10,24 +10,40 @@
     
     Destruct:
     --- Called when Object is Destroyed
+
+    Call:
+    --- Called when invoking Function Not Accessible Or Not Found
  */
 
 class Iphone
 {
 
-    public $name;
+    public $name ;
     public $ram;
-public function sayHello()
-{
-}
-public function __construct()
-{
-    echo 'Object is Created';
-}
+    public function __call($name, $arguments)
+    {
+        echo 'The Method [' . $name . '] Not Found Or Not';
+        foreach($arguments as $argument){
+            echo '<pre>';
+            echo 'The Argument [' . $argument . '] Not Found Or Not';
+            echo '</pre>';
+            
+        }
+    }
+
+
+// public function sayHello($name)
+// {
+//     echo  $this->name = $name;
+// }
+// public function __construct()
+// {
+//     echo 'Object is Created';
+// }
 }
 
 $phone = new Iphone();
-$phone-> sayHello();
+$phone-> sayHello('mohammad','5');
 echo '<pre>';
 print_r($phone);
 echo '</pre>';
