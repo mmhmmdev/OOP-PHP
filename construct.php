@@ -13,23 +13,43 @@
 
     Call:
     --- Called when invoking Function Not Accessible Or Not Found
+
+    Get:
+    --- Called when Getting a Propety Not Accessible Or Not Found 
+    --- Accpet One Parmeter [ $prop ]
+
+    Set:
+    --- CAlled when Setting a Value To a Property Not Accessible Or Not Found
+    --- Accpt Two Parameters [ $prop, $Value ]
+
  */
 
 class Iphone
 {
 
     public $name ;
-    public $ram;
-    public function __call($name, $arguments)
-    {
-        echo 'The Method [' . $name . '] Not Found Or Not';
-        foreach($arguments as $argument){
-            echo '<pre>';
-            echo 'The Argument [' . $argument . '] Not Found Or Not';
-            echo '</pre>';
+    private $ram;
+
+public function __get($prop)
+{
+        echo 'The Property [' . $prop . '] Not Found ';
+    
+}
+
+
+
+
+    
+    // public function __call($name, $arguments)
+    // {
+    //     echo 'The Method [' . $name . '] Not Found Or Not';
+    //     foreach($arguments as $argument){
+    //         echo '<pre>';
+    //         echo 'The Argument [' . $argument . '] Not Found Or Not';
+    //         echo '</pre>';
             
-        }
-    }
+    //     }
+    // }
 
 
 // public function sayHello($name)
@@ -43,7 +63,7 @@ class Iphone
 }
 
 $phone = new Iphone();
-$phone-> sayHello('mohammad','5');
+$phone->ram;
 echo '<pre>';
 print_r($phone);
 echo '</pre>';
