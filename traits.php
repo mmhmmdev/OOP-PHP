@@ -16,26 +16,28 @@ trait FingerPrint2 {
     
 }
 trait FingerPrint3 {
-    public function fingerFeature3(){
+    public function fingerFeature2(){
         echo 'This Is Fineger Feature3';
     }
     
 }
 
 class Iphone {
-    use FingerPrint1;
-    use FingerPrint2;
-    use FingerPrint3;
+    use FingerPrint1,FingerPrint2,FingerPrint3 {
+        FingerPrint2::fingerFeature2 as mohamamdFeat;
+        FingerPrint3::fingerFeature2 insteadOf FingerPrint2;
+    }
     
 }
 
 
 $iphone = new Iphone();
-$iphone->fingerFeature1();
-echo '<br>';
 $iphone->fingerFeature2();
 echo '<br>';
-$iphone->fingerFeature3();
+$iphone->mohamamdFeat();
+// $iphone->fingerFeature2();
+// echo '<br>';
+// $iphone->fingerFeature3();
 
 echo '<pre>'; print_r($iphone); echo'</pre>';
 
